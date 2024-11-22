@@ -1,0 +1,158 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Basic styles for the contact card */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(244, 241, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Ensure no margin around the body */
+}
+
+.contact-card {
+    background-color: rgb(232, 227, 221);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 450px; /* Increased max-width to make the card larger */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0 20px;
+    background-color: #fff; /* Set background color */
+}
+
+.profile-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    width: 180px; /* Increased width of the image container */
+    height: 180px; /* Increased height of the image container */
+}
+  
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+/* Contact info container */
+.info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px; /* Space between the boxes */
+}
+
+.contact-info {
+    margin-right: 20px;
+}
+  
+  
+/* Contact box styles (Name, Title, Phone, Company) */
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the text */
+    width: 100%; /* Ensure all boxes are the same size */
+    margin-bottom: 15px; /* Space between the boxes */
+}
+
+
+/* Name styling */
+.name {
+    font-size: 1.5rem;
+    font-weight: bold; /* Bold the name */
+    margin-bottom: 5px;
+    text-align: center; /* Center-align the name */
+}
+
+/* Styling for Title, Phone, and Company */
+.title, .phone-number, .company-name {
+    font-size: 1rem;
+    color: #555; /* Same color for all text */
+    text-align: center; /* Center-align the text */
+}
+
+
+
+/* Media Query for Mobile (up to 499px) */
+@media (max-width: 499px) {
+    .contact-card {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+  
+    .profile-box {
+      margin-bottom: 20px;
+    }
+  
+    .contact-info, .company-info {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Media Query for Tablet (500px to 1023px) */
+  @media (min-width: 500px) and (max-width: 1023px) {
+    .contact-card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-box {
+      margin-bottom: 20px;
+    }
+  
+    .contact-info, .company-info {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .info-box {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Media Query for Desktop (1024px and up) */
+  @media (min-width: 1024px) {
+    .contact-card {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 25px;
+    }
+  
+    .profile-box {
+      margin-right: 30px;
+    }
+  
+    .contact-info, .company-info {
+      width: 200px; /* Adjust this for more space */
+    }
+  
+    .info-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
